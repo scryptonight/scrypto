@@ -33,4 +33,11 @@ The first three lines is me trying and failing to retrieve a
 `NonFungibleGlobalId`, and the last three lines is the workaround
 doing its thing.
 
+The line of code that doesn't work as I would expect it to is this one in `src/lib.rs`:
+```
+let user_nfgid = resmgr.get_metadata::<String, NonFungibleGlobalId>("user_nfgid".to_string());
+```
+
+Instead of returning an `Ok` wrapping the requested `NonFungibleGlobalId`, `get_metadata` returns the `Err` that is displayed in the output above.
+
 _Scryptonight_
