@@ -18,10 +18,10 @@ mod test_metadata {
                 if let Some(user_nfgid) = user_nfgid {
                     // Getting to here would be a success but we never
                     // do.
-                    info!("Success: Hooray we have our test_nfgid: {:?}", user_nfgid);
+                    info!("Success: Hooray we have our user_nfgid: {:?}", user_nfgid);
                 } else {
                     // We could get to here by sending in a resource
-                    // without the "test_nfgid" metadata field set.
+                    // without the "user_nfgid" metadata field set.
                     info!("Failed: Could not unwrap Some(user_nfgid)");
                 }
             } else {
